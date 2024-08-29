@@ -6,22 +6,78 @@ const Pricing = () => {
             id: 1,
             title: "Basic",
             price: "$9.99",
+            pricing: [
+                "Annual Subscription: $539.89/year (10% discount)",
+                "Hardware Bundle: $349.99 (one-time cost)",
+                "One-Time Purchase: $1450",
+            ],
+            package: [
+                "1 POS terminal",
+                "1 receipt printer",
+                "Basic reporting (daily sales, inventory)",
+                "User-Friendly POS Interface",
+                "Waiter Report Generation",
+                "Work Period Management",
+            ]
 
         },
         {
             id: 2,
             title: "Premium",
             price: "$19.99",
+            pricing: [
+                "Annual Subscription: $1,079.89/year (10% discount)",
+                "Hardware Bundle: $699.99 (one-time cost)",
+                "One-Time Purchase: $2200",
+            ],
+            package: [
+                "2 POS terminals",
+                "2 receipt printer",
+                "Advanced reporting (sales by employee, peak hours analysis)",
+                "Priority email support",
+                "User-Friendly POS Interface",
+                "Waiter Report Generation",
+                "Work Period Management",
+            ]
         },
         {
             id: 3,
             title: "Enterprise",
             price: "$29.99",
+            pricing: [
+                "Annual Subscription: $2,159.89/year (10% discount)",
+                "Hardware Bundle: Custom quote based on requirements",
+            ],
+            package: [
+                "Up to 5 POS terminals",
+                "Up to 5 receipt printers",
+                "Comprehensive reporting suite",
+                "Inventory forecasting",
+                "24/7 phone and email support",
+                "User-Friendly POS Interface",
+                "Waiter Report Generation",
+                "Work Period Management",
+            ]
         },
         {
             id: 4,
             title: "Business",
             price: "$39.99",
+            pricing: [
+                "Custom pricing based on specific requirements",
+                "Contact our sales team for a personalized quote",
+                "Estimate: One-Time Purchase: $8000",
+            ],
+            package: [
+                "Unlimited POS terminals and printers",
+                "Custom reporting and analytics",
+                "Kitchen Display System (KDS)",
+                "Dedicated account manager",
+                "24/7 priority support",
+                "Custom integrations",
+                "On-site training and setup",
+                "Work Period Management",
+            ]
 
         }
     ]
@@ -53,25 +109,40 @@ const Pricing = () => {
                                 <a href="#" className='px-[30px] w-full flex items-center justify-center text-center font-[700] text-white py-[10px] rounded-[4px] bg-[#01A653]'>
                                     Choose Plan
                                 </a>
-                                <div className=' w-full flex flex-col gap-[4px]'>
+                                <div className=' w-full flex flex-col gap-[10px]'>
                                     <h1 className='text-[14px] font-[700] text-black'>Pricing:</h1>
-                                    <div className='flex flex-row gap-[10px] items-center'>
-                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.31166 13.9837C11.053 13.9837 14.086 10.9507 14.086 7.20937C14.086 3.46802 11.053 0.435059 7.31166 0.435059C3.57031 0.435059 0.537354 3.46802 0.537354 7.20937C0.537354 10.9507 3.57031 13.9837 7.31166 13.9837ZM7.15607 8.85902L9.78368 6.14929L9.17577 5.55981L6.84019 7.96837L5.43609 6.63177L4.85224 7.24511L6.56019 8.87094L6.86403 9.16018L7.15607 8.85902Z" fill="#01A653" />
-                                        </svg>
-                                        <span className='text-[12px] text-[#687588] leading-4'>Annual Subscription: $539.89/year (10% discount)</span>
+                                    {item.pricing.map((pric: any,pricIndex:number) => {
+                                        return (
+                                            <div key={pricIndex} className='flex flex-row gap-[10px] items-center'>
+                                                <div>
 
-                                    </div>
+                                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.31166 13.9837C11.053 13.9837 14.086 10.9507 14.086 7.20937C14.086 3.46802 11.053 0.435059 7.31166 0.435059C3.57031 0.435059 0.537354 3.46802 0.537354 7.20937C0.537354 10.9507 3.57031 13.9837 7.31166 13.9837ZM7.15607 8.85902L9.78368 6.14929L9.17577 5.55981L6.84019 7.96837L5.43609 6.63177L4.85224 7.24511L6.56019 8.87094L6.86403 9.16018L7.15607 8.85902Z" fill="#01A653" />
+                                                    </svg>
+                                                </div>
+                                                <span className='text-[13px] text-[#687588] leading-4'>{pric}</span>
+
+                                            </div>
+                                        )
+                                    })}
+
                                 </div>
-                                <div className=' w-full flex flex-col gap-[4px]'>
+                                <div className=' w-full flex flex-col gap-[10px]'>
                                     <h1 className='text-[14px] font-[700] text-black'>Software Package:</h1>
-                                    <div className='flex flex-row gap-[10px] items-center'>
-                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.31166 13.9837C11.053 13.9837 14.086 10.9507 14.086 7.20937C14.086 3.46802 11.053 0.435059 7.31166 0.435059C3.57031 0.435059 0.537354 3.46802 0.537354 7.20937C0.537354 10.9507 3.57031 13.9837 7.31166 13.9837ZM7.15607 8.85902L9.78368 6.14929L9.17577 5.55981L6.84019 7.96837L5.43609 6.63177L4.85224 7.24511L6.56019 8.87094L6.86403 9.16018L7.15607 8.85902Z" fill="#01A653" />
-                                        </svg>
-                                        <span className='text-[12px] text-[#687588] leading-4'>Annual Subscription: $539.89/year (10% discount)</span>
+                                    {item.package.map((packages: any,packageIndex:number) => {
+                                        return (
+                                            <div key={packageIndex} className='flex flex-row gap-[10px] items-center'>
+                                                <div>
 
-                                    </div>
+                                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.31166 13.9837C11.053 13.9837 14.086 10.9507 14.086 7.20937C14.086 3.46802 11.053 0.435059 7.31166 0.435059C3.57031 0.435059 0.537354 3.46802 0.537354 7.20937C0.537354 10.9507 3.57031 13.9837 7.31166 13.9837ZM7.15607 8.85902L9.78368 6.14929L9.17577 5.55981L6.84019 7.96837L5.43609 6.63177L4.85224 7.24511L6.56019 8.87094L6.86403 9.16018L7.15607 8.85902Z" fill="#01A653" />
+                                                    </svg>
+                                                </div>
+                                                <span className='text-[13px] text-[#687588] leading-4'>{packages}</span>
+
+                                            </div>
+                                        )
+                                    })}
                                 </div>
 
                             </div>

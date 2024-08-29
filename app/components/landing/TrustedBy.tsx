@@ -29,12 +29,12 @@ const TrustedBy = () => {
         },
     ]
 
-    const handelClickWithProp = (index:number)=>{
+    const handelClickWithProp = (index: number) => {
         setIsClicked(true)
-        setTimeout(()=>{
+        setTimeout(() => {
             setIsClicked(false)
             setCurrentTest(index)
-        },500)
+        }, 500)
     }
 
     const handelNext = () => {
@@ -56,7 +56,7 @@ const TrustedBy = () => {
         <div className='flex flex-col gap-[30px] items-center py-20'>
             <div className='flex flex-col gap-[40px] items-center'>
                 <h1 className='text-[24px] font-[700] text-black max-w-[500px] text-center leading-6'>Trusted by over 120,000 restaurants of all concepts</h1>
-                <div className='grid grid-cols-3 md:grid-cols-5 gap-[20px]'>
+                <div className='grid grid-cols-2 md:grid-cols-5 gap-[20px]'>
                     <div className='w-full h-[30px]'>
                         <Image src={`/images/typestudio.svg`} width={1000} height={100} alt='log type' className='w-full h-full' />
                     </div>
@@ -77,7 +77,7 @@ const TrustedBy = () => {
             </div>
             <div className='flex flex-col w-full gpa-[20px] px-[10px] md:px-[50px] lg:px-[100px]'>
                 <div className='flex flex-row items-center relative'>
-                    <div className=' absolute left-[-55px] z-10'>
+                    <div className='hidden md:flex absolute left-[-55px] z-10'>
                         <span onClick={handlePrev} className=' cursor-pointer'>
                             <svg width="132" height="132" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_d_14_305)">
@@ -98,22 +98,21 @@ const TrustedBy = () => {
                                     </filter>
                                 </defs>
                             </svg>
-
                         </span>
                     </div>
                     <div className={`flex ${isClicked ? "opacity-0" : "opacity-100"} duration-500 transition-all flex-row gap-[20px] items-center justify-center w-full p-4`}>
-                        <div className='w-full flex flex-row items-center gap-[50px] w-fu'>
-                            <div className='w-1/2 h-[60vh] '>
+                        <div className='w-full flex-col flex md:flex-row items-center gap-[10px] md:gap-[50px] w-fu'>
+                            <div className=' w-full px-10 md:px-0 md:w-1/2 md:h-[60vh] '>
                                 {testimonails[currentTest].profile}
                             </div>
-                            <div className='w-1/2 flex flex-col gap-[5px]'>
+                            <div className=' items-center md:items-start w-full md:w-1/2 flex flex-col gap-[5px]'>
                                 <div className='p-2 rounded-[20px] flex items-center justify-center w-[120px] bg-[#E3F6D1]'>
                                     <span className='text-[12px] font-[700] text-center text-[#01A653]'>RESTAURANT</span>
                                 </div>
                                 <div className='py-4 border-b-2'>
-                                    <span className='text-[16px] font-[700] text-black line-clamp-5'>“Speed of service is better for everyone. Not having to do the administrative work of cashing out that’s better for everyone. ”</span>
+                                    <span className='text-[16px] font-[700] text-black line-clamp-5 text-center md:text-start'>“Speed of service is better for everyone. Not having to do the administrative work of cashing out that’s better for everyone. ”</span>
                                 </div>
-                                <div className='flex flex-col py-3'>
+                                <div className='flex flex-col py-3 items-center md:items-start'>
                                     <span className='text-[14px] font-[700] text-[#323B49]'>{testimonails[currentTest].name}</span>
                                     <span className='text-[16px] font-[400] text-[#01A653]'>{testimonails[currentTest].title}</span>
                                 </div>
@@ -122,7 +121,7 @@ const TrustedBy = () => {
                     </div>
 
                     <div>
-                        <span onClick={handelNext} className=' cursor-pointer'>
+                        <span onClick={handelNext} className=' hidden md:flex cursor-pointer'>
                             <svg width="132" height="132" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_d_14_308)">
                                     <rect x="40" y="34" width="56" height="56" rx="28" fill="white" />
@@ -150,7 +149,7 @@ const TrustedBy = () => {
                         {Array.from({ length: testimonails.length }).map((_, index: number) => (
                             <div
                                 key={index}
-                                onClick={()=> handelClickWithProp(index)}
+                                onClick={() => handelClickWithProp(index)}
                                 className={`w-[10px] h-[10px] rounded-full cursor-pointer ${currentTest === index ? 'bg-gray-600' : 'bg-gray-400'}`}
                             ></div>
                         ))}

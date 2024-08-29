@@ -38,7 +38,7 @@ const FeauterSection = () => {
         <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[18px]'>
           {cards.map((item:any, index) => {
             return (
-              <div className='flex bg-[#01A653]/40 p-6 rounded-[10px]  flex-col gap-[10px] w-full items-center'>
+              <div className='flex bg-[black]/40 p-6 rounded-[10px]  flex-col gap-[10px] w-full items-center'>
                 <div className=' w-[50px] p-2 bg-[#01A653] rounded-[10px] flex items-center justify-center'>
                  {item.icon}
                 </div>

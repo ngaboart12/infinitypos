@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className=' bg-white  flex flex-col gap-[20px]'>
             <div className=' px-[10px] py-10 md:px-[50px] lg:px-[100px] w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]'>
-                <div className=' flex flex-col gap-[10px]'>
+                <div className=' flex flex-col gap-[10px] items-center md:items-start'>
                     <div><h1 className='text-[30px] text-black font-[700]'>INFINITY <span className='text-green-500'> POS</span></h1></div>
                     <a href='#' className='flex flex-row gap-[10px] items-center'>
                         <div><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,20 +99,20 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className='flex flex-col gap-[10px]'>
+                <div className='flex flex-col gap-[10px] items-center md:items-start'>
                     <h1 className='text-[24px] font-[500] text-black'>Customers</h1>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Sign In</a>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Features</a>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Pricing</a>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Refer a Restaurant</a>
                 </div>
-                <div className='flex flex-col gap-[10px]'>
+                <div className='flex flex-col gap-[10px] items-center md:items-start'>
                     <h1 className='text-[24px] font-[500] text-black'>Company</h1>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>About us</a>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Services</a>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>News & Blog</a>
                 </div>
-                <div className='flex flex-col gap-[10px]'>
+                <div className='flex flex-col gap-[10px] items-center md:items-start'>
                     <h1 className='text-[24px] font-[500] text-black'>Support</h1>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Help Center</a>
                     <a href="" className='text-[14px] text-[#687588] hover:text-[#01A653] duration-100'>Privacy Policy</a>
