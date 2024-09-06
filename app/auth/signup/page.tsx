@@ -148,16 +148,16 @@ const SignUp = () => {
                         <div className=' flex flex-col 2px'>
                             <div className=' border w-full rounded-[4px]'>
                                 <textarea
-                                 name='description'
-                                 onChange={formik.handleChange}
-                                 onBlur={formik.handleBlur}
-                                 value={formik.values.description}
-                                 className='p-3 w-full bg-transparent text-[14px] rounded-[4px] ' placeholder='Business description' />
+                                    name='description'
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    value={formik.values.description}
+                                    className='p-3 w-full bg-transparent text-[14px] rounded-[4px] ' placeholder='Business description' />
                             </div>
                             {formik.touched.description && formik.errors.description ? (
                                 <span className='text-[12px] text-red-400'>{formik.errors.description}</span>
                             ) : null}
-                            
+
                         </div>
                         <div className=' flex flex-row gap-[10px] items-center'>
                             <input type='checkbox' />
@@ -168,7 +168,7 @@ const SignUp = () => {
                         <button className='w-full p-3 flex bg-[#01A653] hover:bg-[#19804c] text-white rounded-[4px] items-center justify-center'>
                             <span>Sign Up</span>
                         </button>
-                        <a href="/auth" className='text-[14px] text-[#01A653] hover:text-black py-2 text-center md:text-start'>New to Infinity POS?</a>
+                        <a href="/auth" className='text-[14px] text-[#01A653] hover:text-black py-2 text-center md:text-start'>Already have an account?</a>
 
                     </form>
                 </div>

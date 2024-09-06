@@ -31,7 +31,7 @@ const SignIn = () => {
 
     })
     return (
-        <div className='w-full h-[100vh] flex flex-row'>
+        <div className='w-full px-[10px] lg:px-[0px] h-[100vh] flex flex-row'>
             <div className='hidden md:flex w-1/2 h-full relative '>
                 <div className='w-full h-full absolute z-10'>
                     <Image src={`/images/FeatureSection.png`} width={1000} height={1000} className='w-full h-full     object-cover' alt='fetaure section' />
